@@ -1,0 +1,56 @@
+{
+  "name": "mailsense-extension",
+  "version": "2.1.0",
+  "description": "MailSense - AI Email Intelligence Chrome Extension. Transform Gmail with AI-powered tabs, smart categorization, and intelligent email insights.",
+  "main": "background.js",
+  "scripts": {
+    "build": "echo 'Building MailSense Extension...' && npm run validate",
+    "validate": "node scripts/validate-manifest.js",
+    "package": "zip -r mailsense-extension.zip . -x 'node_modules/*' '*.git*' 'package*.json' 'scripts/*' 'README.md'",
+    "dev": "echo 'Load unpacked extension in Chrome Developer Mode'",
+    "lint": "eslint *.js",
+    "test": "echo 'No tests specified yet'"
+  },
+  "keywords": [
+    "chrome-extension",
+    "gmail",
+    "ai",
+    "email",
+    "intelligence",
+    "productivity",
+    "mailsense",
+    "email-management",
+    "gmail-extension"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nyuchitech/mailsense-extension.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nyuchitech/mailsense-extension/issues"
+  },
+  "homepage": "https://github.com/nyuchitech/mailsense-extension#readme",
+  "author": {
+    "name": "Nyuchi Web Services",
+    "email": "hello@nyuchi.com",
+    "url": "https://nyuchi.com"
+  },
+  "contributors": [
+    {
+      "name": "Bryan Fawcett",
+      "email": "bryan@nyuchi.com",
+      "url": "https://github.com/bryanfawcett"
+    }
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0"
+  },
+  "manifest": {
+    "version": "2.1.0",
+    "manifest_version": 3
+  }
+}
