@@ -17,11 +17,13 @@ MailSense is a Chrome extension that brings artificial intelligence to your Gmai
 ## 📦 Installation
 
 ### From Chrome Web Store
+
 1. Visit the Chrome Web Store (coming soon)
 2. Click "Add to Chrome"
 3. Confirm the installation
 
 ### Manual Installation (Developer Mode)
+
 1. Download or clone this repository
 2. Open Chrome and navigate to `chrome://extensions/`
 3. Enable "Developer mode" in the top right
@@ -31,11 +33,13 @@ MailSense is a Chrome extension that brings artificial intelligence to your Gmai
 ## 🛠️ Development
 
 ### Prerequisites
-- Node.js 16+ 
+
+- Node.js 16+
 - Chrome browser
 - Gmail account
 
 ### Setup
+
 ```bash
 # Clone the repository
 git clone https://github.com/nyuchitech/mailsense-extension.git
@@ -52,6 +56,7 @@ npm run package
 ```
 
 ### Loading in Chrome
+
 1. Open `chrome://extensions/`
 2. Enable "Developer mode"
 3. Click "Load unpacked"
@@ -78,6 +83,7 @@ mailsense-extension/
 ## 🔧 Configuration
 
 Access extension options by:
+
 1. Right-clicking the MailSense icon
 2. Selecting "Options"
 3. Configure your AI preferences and email categories
@@ -87,6 +93,7 @@ Access extension options by:
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
 ### Development Workflow
+
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
@@ -100,7 +107,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🆘 Support
 
 - **Issues**: [GitHub Issues](https://github.com/nyuchitech/mailsense-extension/issues)
-- **Email**: hello@nyuchi.com
+- **Email**: <hello@nyuchi.com>
 - **Documentation**: [Wiki](https://github.com/nyuchitech/mailsense-extension/wiki)
 
 ## 🏢 About Nyuchi
