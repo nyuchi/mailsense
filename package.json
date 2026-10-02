@@ -8,8 +8,10 @@
     "validate": "node scripts/validate-manifest.js",
     "package": "zip -r mailsense-extension.zip . -x 'node_modules/*' '*.git*' 'package*.json' 'scripts/*' 'README.md'",
     "dev": "echo 'Load unpacked extension in Chrome Developer Mode'",
-    "lint": "eslint *.js",
-    "test": "echo 'No tests specified yet'"
+    "lint": "vp lint",
+    "test": "echo 'No tests specified yet'",
+    "check": "vp check",
+    "fmt": "vp fmt"
   },
   "keywords": [
     "chrome-extension",
@@ -47,10 +49,11 @@
     "node": ">=16.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.50.0"
+    "vite-plus": "^1.0.0"
   },
   "manifest": {
     "version": "2.1.0",
     "manifest_version": 3
-  }
+  },
+  "packageManager": "npm@11.12.1"
 }
