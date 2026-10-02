@@ -346,13 +346,23 @@ function handleCleanupAnalysis(tabId) {
     });
 }
 
+// True only when the URL's host is Gmail itself. A substring test would also
+// match hosts such as mail.google.com.example.net or a query string.
+function isGmailUrl(url) {
+  try {
+    return new URL(url).hostname === "mail.google.com";
+  } catch {
+    return false;
+  }
+}
+
 // Handle tab activation/focus
 chrome.tabs.onActivated.addListener(async (activeInfo) => {
   try {
     const tab = await chrome.tabs.get(activeInfo.tabId);
 
     // Check if it's a Gmail tab
-    if (tab.url && tab.url.includes("mail.google.com")) {
+    if (isGmailUrl(tab.url)) {
       console.log("Gmail Tabs: Gmail tab activated");
 
       // Send a message to refresh tabs if needed
@@ -372,11 +382,7 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
 // Handle tab updates
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
   // Check if Gmail has loaded
-  if (
-    changeInfo.status === "complete" &&
-    tab.url &&
-    tab.url.includes("mail.google.com")
-  ) {
+  if (changeInfo.status === "complete" && isGmailUrl(tab.url)) {
     console.log("Gmail Tabs: Gmail tab loaded");
 
     // Give Gmail time to fully load, then inject tabs
